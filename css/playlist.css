@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'kopub바탕';
+  src: url(../KoPubBatangLight.ttf);
+}
+
+body {
+  background-color: #fefae0;
+  /* height: 5000px; */
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #5f6f52;
+}
+
+
+header {
+  z-index: 9;
+  width: 100%;
+  position: fixed;
+  background-color: #a9b388;
+}
+header > .inner {
+  background-color: #a9b388;
+  height: 80px;
+}
+header .title {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  color: bisque;
+  font-size: 30px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'kopub바탕';
+}
+header .sub-menu {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 50px;
+}
+header .sub-menu ul.menu {
+  display: flex;
+}
+header .sub-menu ul.menu li {
+  
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #745e47;
+  position: absolute;
+}
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  padding: 5px 10px;
+}
+
+
+/* YOUTUBE SLIDE */
+.youtube {
+  position: absolute;
+  top: 80px;
+  background-color: #b99470;
+  width: 100%;
+}
+.youtube .inner {
+  height: 400px;
+  /* background-color: #aa8bd7; */
+}
+.youtube .swiper {
+  top: 10px;
+  width: 700px;
+  height: 380px;
+}
+.youtube .swiper-slide {
+  opacity: .3;
+  position: relative;
+  width: 100%;
+  height: 380px;
+  padding-top: 50%;
+  opacity: .5;
+  transition: .5s;
+}
+iframe {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+.youtube .swiper-slide-active {
+  opacity: 1;
+}
+.youtube .swiper-pagination {
+  z-index: 2;
+}
+.youtube .swiper-pagination .swiper-pagination-bullet {
+  background-color: #5f6f52;
+  margin-right: 6px;
+}
+.youtube .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.youtube .swiper-prev,
+.youtube .swiper-next {
+  width: 35px;
+  height: 35px;
+  outline: none;
+  border: 1px solid #5f6f52;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc((380px / 2) - 15px);
+  z-index: 2;
+  transition: .5s;
+  cursor: pointer;
+}
+.youtube .swiper-prev:hover,
+.youtube .swiper-next:hover {
+  background-color: #5f6f52;
+}
+.youtube .swiper-prev {
+  left: 150px;
+}
+.youtube .swiper-next {
+  right: 150px;
+}
+.youtube .material-icons {
+  color: #5f6f52;
+  transition: .5s;
+}
+.youtube .material-icons:hover {
+  color:#fefae0
+}
+
+
+
+
+/* PLAYLIST */
+.playlist {
+  font-family: 'kopub바탕';
+  position: absolute;
+  top: 480px;
+  background-color: #fefae0;
+  width: 100%;
+}
+.playlist .inner {
+  height: 1500px;
+  background-color: #fefae0;
+  
+}
+.playlist .musiclist {
+  /* background-color: aquamarine; */
+  /* height: 500px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 30px;
+}
+.playlist .music {
+  margin: 0 10px 10px 0;
+  width: 550px;
+  height: 60px;
+  border: 1px solid #5f6f52;
+  border-radius: 18px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefae0;
+  transition: .5s;
+  color: #fefae0;
+}
+.playlist .music:hover {
+  background-color: #a9b388;
+}
+.playlist .music .musictitle {
+  font-size: 18px;
+  padding: 2% 15%;
+  color: #5f6f52;
+  transition: .5s;
+}
+.playlist .music .musictitle:hover {
+  color: #fefae0;
+}
+.playlist .novel {
+  margin: 0 10px 30px 0;
+  width: 50px;
+  height: 60px;
+  /* border: 1px solid #745e47;
+  border-radius: 18px;
+  box-sizing: border-box; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefae0;
+  transition: .5s;
+}
+.playlist .novel:hover {
+  
+}
+.playlist .novel .noveltitle {
+  opacity: 1;
+}
+.playlist .novel .material-icons {
+  font-size: 30px;
+  color: #5f6f52;
+}
+.playlist .novel .noveltitle.linknotattached {
+  opacity: .3;
+  cursor: default;
+}
