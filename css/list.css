@@ -1,0 +1,68 @@
+
+.list {
+  font-family: 'kopub바탕';
+  position: absolute;
+  top: 80px;
+  /* background-color: #b99470; */
+  width: 100%;
+}
+.list .inner {
+  
+}
+.list .index {
+  justify-content: center;
+  margin-top: 50px;
+  top: 50px;
+  height: 80px;
+}
+.list .index:last-child {
+  margin-bottom: 100px;
+}
+.list .date {
+  position: relative;
+  left: 350px;
+  color: bisque;
+  width: 40px;
+  height: 25px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  line-height: 25px;
+  background-color: #5f6f52;
+}
+.list .maintitle {
+  opacity: 1;
+  position: absolute;
+  left: 330px;
+  width: 500px;
+  height: 70px;
+  border: 1px solid #5f6f52;
+  border-radius: 18px;
+  color: #5f6f52;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  transition: .5s;
+}
+.list .maintitle.mouseover {
+  opacity: .3;
+}
+.list .mainsentence {
+  opacity: 1;
+  text-align: center;
+  position: relative;
+  top: 15px;
+  left: 30px;
+  color: #5f6f52;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  opacity: 0;
+}
+.list .mainsentence.visible {
+  opacity: 1;
+  transform: translateY(5px);
+}

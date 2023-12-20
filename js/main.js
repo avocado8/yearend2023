@@ -40,4 +40,4 @@ function countingType1(num){
   }
 }
 
-charcounterEl.addEventListener('load', countingType1(120418))
+charcounterEl.addEventListener('load', countingType1(279050))

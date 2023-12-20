@@ -30,15 +30,25 @@ def setmonthstr(num):
     return 'Dec'
   else:
     return
-
-totalcount = 0
+total = 0
+totalcount_month = 0
 
 for i in range(12):
   month_num = i +1
   month_str = setmonthstr(month_num)
   soup = BeautifulSoup(open("monthdata/"+month_str+".html", encoding="utf-8"), "html.parser")
-  bodytext = bodytext = soup.find('div', class_='bodytext')
-  totalcount = totalcount + len(bodytext.text)
+  bodytext = soup.find('div', class_='bodytext')
+  totalcount_month = totalcount_month + len(bodytext.text)
 
-print(totalcount)
+totalcount_list = 0
+for i in range(40):
+  try:
+    f = open("./backup/w"+str(i+1)+".html", encoding="utf-8")
+    soup = BeautifulSoup(f, "html.parser")
+    listtext = listtext = soup.find('div',class_='bodytext')
+    totalcount_list = totalcount_list + len(listtext.text)
+  except FileNotFoundError:
+    continue
 
+total = totalcount_month + totalcount_list
+print(total)
